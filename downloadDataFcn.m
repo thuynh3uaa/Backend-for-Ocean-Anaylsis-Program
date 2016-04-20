@@ -4,6 +4,7 @@ function [downloadedFileName, dl_date_str] = downloadDataFcn(downloadLocation,dl
 global homedir
 homedir = pwd;
 
+
 dl_date_str = datestr(dl_date,'yyyy-mm-dd');
 day8= dl_date + days(8);
 day8str = datestr(day8,'yyyy-mm-dd');
