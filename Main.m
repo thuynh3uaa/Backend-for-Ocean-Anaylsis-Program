@@ -17,7 +17,7 @@ fileLocationForLCS = timeblockFormatData(filename, current_date_str);
 cd (homefolder)
 Modified_LCS_Calculation_V2(fileLocationForLCS);
 cd (homefolder)
-zfiles = [fileLocationforLCS, '/MatFiles/'];
+zfiles = [fileLocationForLCS, '/MatFiles/'];
 plotData(zfiles);
 cd (homefolder);
 
