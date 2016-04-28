@@ -1,4 +1,4 @@
-function [DateTime, Lat, Lon, u_vel, v_vel] = csvFormatFcn(filename)
+function [DateTime, Lat, Lon, u_vel, v_vel] = csvFormat(filename)
 % pathHead = '/usr/local/MATLAB/R2014b/Research/Tuan_testing/rawdata/velocity_from_';
 % dl_date = datetime('now','Format','yyyy-MM-dd');
 % current_date_str = datestr(dl_date,'yyyy-mm-dd');

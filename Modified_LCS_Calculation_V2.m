@@ -116,7 +116,9 @@ end
 ComputeFTLEMenuItem_Callback
 
 function ComputeFTLEMenuItem_Callback()
-
+%The x,y coordinates are in signed degrees, work needs to be done to change
+%these values to km and check the correctness of the data
+    
 global nx ny f_start f_end f_int t_length tstep dt 
 global settings_startF settings_endF settings_frameInt settings_integrationL settings_meshY settings_meshX
 global settings_timeInter settings_stepSize settings_regionXMax settings_regionYMax settings_regionXMin settings_regionYMin
