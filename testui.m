@@ -22,7 +22,7 @@ function varargout = testui(varargin)
 
 % Edit the above text to modify the response to help testui
 
-% Last Modified by GUIDE v2.5 06-Apr-2016 01:43:57
+% Last Modified by GUIDE v2.5 27-Apr-2016 18:49:19
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
