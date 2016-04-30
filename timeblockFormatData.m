@@ -6,7 +6,7 @@ function fileLocationForLCS = timeblockFormatData(filename,current_date_str)
 %Modified_LCS_Calculation_V2 function
 
 %Extract data from CSV file
-[DateTime, Lat, Lon, u_vel, v_vel] = csvFormatFcn(filename);
+[DateTime, Lat, Lon, u_vel, v_vel] = csvFormat(filename);
 
 
 t = datetime(DateTime, 'InputFormat', 'uuuu-MM-dd''T''HH:mm:ss''Z', 'Format', 'yyyy-MM-dd HH:mm:ss');
