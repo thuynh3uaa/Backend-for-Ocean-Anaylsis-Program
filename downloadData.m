@@ -1,4 +1,4 @@
-function [downloadedFileName, dl_date_str] = downloadData(downloadLocation,dl_date, lat_s, lat_e, lon_s, lon_e)
+function [fullFileName, dl_date_str] = downloadData(downloadLocation,dl_date, lat_s, lat_e, lon_s, lon_e)
 %UNTITLED Summary of this function goes here
 %   Function that downloads data from NOAA, it needs a folder location,
 %   date you wish to download from, the coordinates of the area you want to
