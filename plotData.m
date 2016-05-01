@@ -8,7 +8,8 @@ load('settings.mat','settings_startF', 'settings_endF')
 % end
 
 cd(zfolder)
-    
+home = pwd;  
+
 for n = 1:g
     zfile = ['Z_T', num2str(n), '.mat'];
     load(zfile);
@@ -36,12 +37,16 @@ for n = 1:g
     
     
 %     Output the contours into pdf and png file
-    
+    cd ..
+    cd ..
     fileextension = '.pdf';
-    name = [zfolder,'/image', num2str(n) ,fileextension];
+    %name = [zfolder,'/image', num2str(n) ,fileextension];
+    name = ['image', num2str(n), fileextension];
     print('-dpdf',name);
     fileextension = '.png';
-    name=[zfolder,'/image', num2str(n) ,fileextension];
+    %name=[zfolder,'/image', num2str(n) ,fileextension];
+    name = ['image' , num2str(n), fileextension];
     print('-dpng',name);
+    cd (home)
 end
 end

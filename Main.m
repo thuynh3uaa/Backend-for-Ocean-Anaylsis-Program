@@ -8,8 +8,8 @@ cd (settings_folderLocation)
 %Takes in 4 parameters, Lattitude & Longitude Start and End from the
 %Settings File.
 dl_date = datetime('now','Format','yyyy-MM-dd');
-%dl_date = dl_date - days(1);
-[filename,current_date_str] = downloadDataFcn(settings_folderLocation, dl_date,...
+dl_date = dl_date - days(1);
+[filename,current_date_str] = downloadData(settings_folderLocation, dl_date,...
     settings_latStart,settings_latEnd,...
     settings_longStart, settings_longEnd);
 disp(filename);
