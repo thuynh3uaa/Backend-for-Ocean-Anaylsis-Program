@@ -30,8 +30,15 @@ else
     cd([current_date_str])
 end
 
+h = exist('tempdata' , 'dir');
+if h == 0
+    mkdir tempdata
+    cd tempdata
+else
+    cd tempdata
+end
 %Make files that are 3 hours block each of the original data
-for n = 0:64
+for n = 1:64
         
         temp_ds = ds(ds.t == start + hours(3 * n),{'Lat', 'Lon', 'u_vel', 'v_vel'});
 

@@ -2,13 +2,14 @@ function dataPlot(zfolder)
 figure(1)
 %
 load('settings.mat','settings_startF', 'settings_endF')
- g = settings_endF - settings_startF + 1;
-% if g == 0 
+g = settings_endF - settings_startF + 1;
+% if g == 0
 %      g = g + 1;
 % end
 
 cd(zfolder)
-    
+home = pwd;
+
 for n = 1:g
     zfile = ['Z_T', num2str(n), '.mat'];
     load(zfile);
@@ -35,13 +36,22 @@ for n = 1:g
     title('FTLE plot');
     
     
-%     Output the contours into pdf and png file
-    
+    %     Output the contours into pdf and png file
+    cd ..
+    cd ..
     fileextension = '.pdf';
-    name = [zfolder,'/image', num2str(n) ,fileextension];
+    %name = [zfolder,'/image', num2str(n) ,fileextension];
+    name = ['image', num2str(n), fileextension];
     print('-dpdf',name);
     fileextension = '.png';
-    name=[zfolder,'/image', num2str(n) ,fileextension];
+    %name=[zfolder,'/image', num2str(n) ,fileextension];
+    name = ['image' , num2str(n), fileextension];
     print('-dpng',name);
+    cd (home)
 end
+%% Delete the temp data folder
+cd ..
+cd ..
+rmdir('tempdata', 's')
+
 end
