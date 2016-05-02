@@ -6,7 +6,6 @@ function [fullFileName, dl_date_str] = downloadData(downloadLocation,dl_date, la
 %   folder location. 
 %   The function returns the filename of the data and the date of the dataset
 %  
-global homedir
 homedir = pwd;
 
 
@@ -44,7 +43,7 @@ url = [urlhead url_u_vel ',' url_v_vel];
 
 %Downloading from website
 
-options = weboptions('Timeout', 60);
+options = weboptions('Timeout', 120);
 
 fileName = [downloadLocation '/velocity_from_' dl_date_str '.txt'];
 fullFileName = websave(fileName,url,options);
